@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Новости города и региона</title>
+  <meta name="description" content="Агрегатор новостей города и региона: заголовки, краткие аннотации и ссылки на первоисточники." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#0f1220;--card:#151935;--text:#ecf0ff;--muted:#9aa2c7;--brand:#6ea8fe;--ring:0 0 0 3px rgba(110,168,254,.3)}
+    *{box-sizing:border-box}
+    html,body{margin:0;background:linear-gradient(180deg,#0f1220,#0b1021);color:var(--text);font:16px/1.6 Inter,system-ui,Arial,sans-serif}
+    a{color:var(--brand);text-decoration:none}
+    header{position:sticky;top:0;padding:10px 0;background:rgba(10,14,35,.7);backdrop-filter:blur(8px);border-bottom:1px solid rgba(255,255,255,.06);z-index:50}
+    .container{width:min(1100px,92vw);margin:0 auto}
+    .row{display:flex;align-items:center;gap:12px}
+    .logo{width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,#6ea8fe,#9fffcb);display:grid;place-items:center;color:#0a0e1f;font-weight:800}
+    .title{font-weight:700}
+    .back{margin-left:auto;padding:8px 12px;border-radius:10px;border:1px solid rgba(255,255,255,.12);color:var(--text)}
+    main{padding:24px 0}
+    h1{font-size:clamp(24px,3.5vw,34px);margin:.2em 0 .5em}
+    .lead{color:var(--muted);margin:0 0 12px}
+    .muted{color:var(--muted);font-size:14px}
+    .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:14px;margin-top:16px}
+    .card{grid-column:span 6;background:var(--card);border:1px solid rgba(255,255,255,.06);border-radius:16px;padding:14px}
+    .card h3{margin:.1em 0 .3em;font-size:18px;line-height:1.35}
+    .meta{display:flex;gap:10px;align-items:center;color:var(--muted);font-size:13px;margin-bottom:6px}
+    .src{padding:3px 8px;border-radius:999px;border:1px solid rgba(255,255,255,.16)}
+    .snip{color:#d7dcff}
+    .card a.more{display:inline-block;margin-top:10px}
+    @media (max-width:900px){.card{grid-column:span 12}}
+    .empty{padding:18px;border:1px dashed rgba(255,255,255,.2);border-radius:12px;color:var(--muted)}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container row">
+      <div class="logo">КС</div>
+      <div class="title">Новости города и региона</div>
+      <a class="back" href="./">← На главную</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>Новости города и региона</h1>
+    <p class="lead">Автоматическая подборка из Google News по теме. Только заголовки, краткие аннотации и ссылки на оригинальные публикации. Обновляем ~каждый час.</p>
+    <div id="updated" class="muted">Обновляем данные…</div>
+    <div id="news" class="grid" aria-live="polite" aria-busy="true"></div>
+    <p id="empty" class="empty" style="display:none">Пока нет материалов. Попробуйте обновить страницу чуть позже.</p>
+    <p class="muted">Источник темы: <a href="https://news.google.com/topics/CAAqIggKIhxDQkFTRHdvSkwyMHZNREprZG5Sa0VnSnlkU2dBUAE?hl=ru&gl=RU&ceid=RU:ru" target="_blank" rel="noopener">Google News (RU)</a>.</p>
+  </main>
+
+  <script>
+  (function(){
+    'use strict';
+    var target = document.getElementById('news');
+    var empty = document.getElementById('empty');
+    var updated = document.getElementById('updated');
+
+    function fmtDate(iso){
+      try{
+        var d = new Date(iso);
+        return d.toLocaleString('ru-RU', {year:'numeric', month:'long', day:'numeric', hour:'2-digit', minute:'2-digit'});
+      }catch(_){ return ''; }
+    }
+
+    fetch('data/news.json?v=' + Date.now())
+      .then(function(r){ return r.ok ? r.json() : {items:[]}; })
+      .then(function(data){
+        target.setAttribute('aria-busy','false');
+        updated.textContent = data.generated_at ? ('Обновлено: ' + fmtDate(data.generated_at)) : '';
+        var items = (data && data.items) ? data.items.slice(0,5) : [];
+        if(!items.length){ empty.style.display='block'; return; }
+        items.forEach(function(it){
+          var card = document.createElement('article');
+          card.className = 'card';
+          card.innerHTML =
+            '<div class="meta"><span class="src">'+ (it.source || 'Источник') +'</span><span>'+ fmtDate(it.published_at || '') +'</span></div>'+
+            '<h3>'+ (it.title || '') +'</h3>'+
+            '<p class="snip">'+ (it.snippet || '') +'</p>'+
+            '<a class="more" href="'+ (it.url || '#') +'" target="_blank" rel="noopener">Читать в источнике →</a>';
+          target.appendChild(card);
+        });
+      })
+      .catch(function(err){
+        console.error(err);
+        empty.style.display='block';
+      });
+  })();
+  </script>
+</body>
+</html>
