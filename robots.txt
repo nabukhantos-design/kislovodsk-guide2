@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://nabukhantos-design.github.io/kislovodsk-guide2/sitemap.xml
+Sitemap: https://micro-media.ru/sitemap.xml
+Host: micro-media.ru
