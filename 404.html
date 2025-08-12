@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Страница не найдена — Микро-медиа</title>
+  <meta name="robots" content="noindex">
+  <style>
+    /* простой тёмный стиль, чтобы совпадал с сайтом */
+    :root { color-scheme: dark; }
+    body {
+      margin: 0; min-height: 100svh;
+      display: grid; place-items: center;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+      background: #0b0f16; color: #e6e8ec;
+    }
+    .card {
+      max-width: 680px; padding: 24px 28px;
+      background: #121826; border-radius: 16px;
+      box-shadow: 0 18px 60px rgba(0,0,0,.35);
+    }
+    h1 { margin: 0 0 8px; font-size: 28px; line-height: 1.2; }
+    p  { margin: 0 0 16px; opacity: .9; }
+    .actions a {
+      display: inline-block; margin: 10px 10px 0 0;
+      padding: 10px 14px; border-radius: 999px;
+      text-decoration: none;
+    }
+    .primary   { background: #2b87ff; color: #fff; }
+    .secondary { border: 1px solid #2b87ff; color: #2b87ff; }
+  </style>
+</head>
+<body>
+  <main class="card" role="main">
+    <h1>Ой! Такой страницы нет.</h1>
+    <p>Ссылка могла устареть или быть набрана с ошибкой.</p>
+    <div class="actions">
+      <a class="primary" href="/">На главную</a>
+      <a class="secondary" href="/news.html">Новости города</a>
+      <a class="secondary" href="javascript:history.back()">Вернуться назад</a>
+    </div>
+  </main>
+</body>
+</html>
