@@ -1,20 +1,27 @@
 {
   "topic_url": "https://news.google.com/topics/CAAqIggKIhxDQkFTRHdvSkwyMHZNREprZG5Sa0VnSnlkU2dBUAE?hl=ru&gl=RU&ceid=RU:ru",
-  "generated_at": "2026-03-26T06:07:17Z",
+  "generated_at": "2026-03-26T07:56:22Z",
   "items": [
+    {
+      "title": "В Кисловодске подвели итоги этапа чемпионата для людей с ОВЗ «Абилимпикс» - Ставропольская правда",
+      "snippet": "В Кисловодске подвели итоги этапа чемпионата для людей с ОВЗ «Абилимпикс»&nbsp;&nbsp;Ставропольская правда",
+      "source": "Ставропольская правда",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNdVVKZzF1d2IwQzgwUjRURUxaZjNDS0VzM0hVSVNPbmZLanhaSXdfTkpYZXFSYUdRWWY5R0lrc1VWcDRtVkN3ZHhEeW85WnFMMHVWVjR3MFVhSWRnV2otNjBPdUpwUzBkclhEVXFmX3hqZVlOSzlVN0pxb0l5ZC1FTC1vU2NPTVg4elFXeVdhTXFnRDFoNGo3UGJRYVg1RllfLXNmak5UODVYVXZTUTZN?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "published_at": "2026-03-26T07:11:00Z"
+    },
+    {
+      "title": "Кисловодск станет площадкой испытаний электрического и роботизированного транспорта - АТВ Ставрополь",
+      "snippet": "Кисловодск станет площадкой испытаний электрического и роботизированного транспорта&nbsp;&nbsp;АТВ Ставрополь",
+      "source": "АТВ Ставрополь",
+      "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE5wa2htZEREUXVhRjJCbDVaNm4tZE81T0g4dTBvbFdUeTFUeEJjM094b0h0RWctRzRZdC1CUEY3cElOYTJZTTZRbUtPQdIBUEFVX3lxTFBmbzZ0bWJfU1JGb2hZQmhkOHF6ZlVzYkppU1F0VnhTX2NzTEpNQTJLQklSQlBDTXZjeUl3Y00wcFA5VVU4RFhTSFQ5T1kySlp3?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "published_at": "2026-03-26T06:41:06Z"
+    },
     {
       "title": "Водоснабжение в Кисловодске планируют восстановить 26 марта до 10:00 - Победа 26",
       "snippet": "Водоснабжение в Кисловодске планируют восстановить 26 марта до 10:00&nbsp;&nbsp;Победа 26",
       "source": "Победа 26",
       "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxORWdiYXExSndiQm5DaUVqRDhzcW12cDF6RU9CZGlzX1ZCaXBINW1rTDhWOE5RZFVLZkZ1QmxoR0J5R3U0R2g0Zklxb1BmN1RTV1hyd2RUQjZLbjBWcFowQkhpazRkeTh6X3NTdVVBbmhwOWJabWs5VzlaaGRyeGwxd3lSTE1Cb19BTTRDUXd5aks4RjNQTWFBVUZVY1NZam16YnZLTFMtbDlnNGxGaF9SZFFTT2dlTWdZa1E?oc=5&hl=en-US&gl=US&ceid=US:en",
       "published_at": "2026-03-26T05:15:00Z"
-    },
-    {
-      "title": "В Кисловодске школьники представили рукотворные книги о народах России - Ставропольская правда",
-      "snippet": "В Кисловодске школьники представили рукотворные книги о народах России&nbsp;&nbsp;Ставропольская правда",
-      "source": "Ставропольская правда",
-      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQWHNUNUxCeWhWS0xXSWlzWnlNX0RoQ0FwMVQtQUkzcGpiTEFDYVJsQk5lUTNaY1ZFZEItMmV4R1E5OGYzaDdUMllLVG1ybnhkczRBQUV0Zktza3V4bzZBcy1ybElrcU1ZQWFhc1pRbmgyWlBOTW1pT1ZUNlV4OGJRdzA3UlNVV1hvV0VQaTZ1VVJOTnR0Qk9UWENZTkZidmVUYTU2dFZOMEZhZw?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "published_at": "2026-03-25T15:02:21Z"
     },
     {
       "title": "Кисловодчанина приговорили к колонии за удар ножом в шею собутыльника - Портал Кисловодска",
@@ -29,13 +36,6 @@
       "source": "АТВ Ставрополь",
       "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFAwMlg5dF9iQTBqZ1FSa09ZRTAtYkNvR3B5eWpGaTYtQzdITGpGNV9wS1pMUGl2N0lRMFIwTGJKSUpDenp1Rzlkb1ZqeTMyeVnSAVRBVV95cUxNbkR1NlQ0bDdUUVU2WVdoalRDeGlpX3dMMExHX2Qza0pOTE00VHd3RFhGbHV0Vm9TRFRUb3d5OXgzYmdQV0tiWHJ5Q2RSQVFSMUJiaFY?oc=5&hl=en-US&gl=US&ceid=US:en",
       "published_at": "2026-03-25T09:34:00Z"
-    },
-    {
-      "title": "В Кисловодске ремонтируют дорогу к поликлинике - Вечерний Ставрополь",
-      "snippet": "В Кисловодске ремонтируют дорогу к поликлинике&nbsp;&nbsp;Вечерний Ставрополь",
-      "source": "Вечерний Ставрополь",
-      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPVlFVdmw1SHlrYkpjYlc5bmdoOWQ1M3FFRGVDYkdoRk8tVGRMSDAwd251c2RSV1JibTJVMTRhd0stZEtMUEk2VmRyc2k5Y0w2Nk1BS0xJQzFMd3Z2YzVEaVJycGk4blJCby1ScFlIYklicFJhSmJldFpla2ktZld2TU5hTmpHT0R2Y1dEdklZWnVuRl85RHMw?oc=5&hl=en-US&gl=US&ceid=US:en",
-      "published_at": "2026-03-24T10:27:31Z"
     }
   ]
 }
